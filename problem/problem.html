@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="#" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>Joy Code</title>
+</head>
+
+<body>
+    <div class="sidenav">
+        <a href="/">Home</a>
+        <a href="/problem/problem.html">Problem</a>
+        <a href="/result/result.html">Result</a>
+    </div>
+
+    <div class="main">
+        <h2>문제 목록</h2>
+        <div class="content">
+            <button id="createProblemButton">NEW</button>
+            <br><br>
+            <div id="dataContainer">
+                <!-- 여기에 데이터 렌더링 -->
+                <table id="problemTable">
+                    <thead>
+                    <tbody>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Content</th>
+                        <th>Input</th>
+                        <th>Output</th>
+                        <th>Delete</th>
+                    </tbody>
+                    </thead>
+
+                </table>
+            </div>
+            <script type="module" src="../scripts/problem.js"></script>
+        </div>
+    </div>
+</body>
+
+</html>

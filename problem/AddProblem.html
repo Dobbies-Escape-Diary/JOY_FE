@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="shortcut icon" href="#" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../styles/style.css" />
+  <title>Joy Code</title>
+</head>
+
+<body>
+  <div class="sidenav">
+    <a href="/">Home</a>
+    <a href="/problem/problem.html">Problem</a>
+    <a href="/result/result.html">Result</a>
+  </div>
+
+  <div class="main">
+    <h2>새로운 문제 제출</h2>
+    <div class="content">
+
+      <form id="problemForm" method="post">
+        <label for="problemTitle">Title:</label><br>
+        <input type="text" id="problemTitle" name="problemTitle" required>
+        <br><br>
+
+        <label for="problemDescription">Contents:</label><br>
+        <textarea id="problemDescription" name="problemDescription" rows="10" cols="50%"></textarea>
+        <br><br>
+
+        <label for="problemInput">Input:</label><br>
+        <textarea id="problemInput" name="problemInput" rows="3" cols="50%" required></textarea>
+        <br><br>
+
+        <label for="problemOutput">Output:</label><br>
+        <textarea id="problemOutput" name="problemOutput" rows="3" cols="50%" required></textarea>
+        <br><br>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+  <script type="module" src="../scripts/add_problem.js"></script>
+</body>
+
+</html>
