@@ -16,7 +16,7 @@ document.getElementById("problemForm").addEventListener("submit", async function
             title: problemTitle,
             content: problemDescription,
             exampleTestInput: problemInput,
-            exampleTestOut: problemOutput
+            exampleTestOutput: problemOutput
         });
         
         console.log("문제 추가 성공:", response.data);

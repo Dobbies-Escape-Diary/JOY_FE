@@ -59,6 +59,6 @@ async function deleteProblem(item) {
     });
             
     console.log("응답:", response.data);
-    alert("서버 응답: " + response.data.message);
+    alert("Error: 준비중..!");
     location.reload();
 }

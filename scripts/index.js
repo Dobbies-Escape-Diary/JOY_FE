@@ -22,7 +22,7 @@ document.getElementById("codeGenerateBtn").addEventListener("click", function() 
             const base64Encoded = btoa(data.result.url);
 
             const resultContainer = document.getElementById("base64");
-            const resultElement = document.createElement("div");
+            const resultElement = document.createElement("h3");
             
             resultElement.textContent = base64Encoded;
             resultContainer.appendChild(resultElement);
