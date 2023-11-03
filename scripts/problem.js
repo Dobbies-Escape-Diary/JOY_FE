@@ -1,7 +1,8 @@
 import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
 
 const url='https://jsonplaceholder.typicode.com/posts';
-const server_ip ='';
+const server_ip ='http://ec2-43-202-43-121.ap-northeast-2.compute.amazonaws.com:8080';
+
 
 const createProblemButton = document.getElementById("createProblemButton");
 createProblemButton.addEventListener("click", () => {
@@ -12,8 +13,10 @@ createProblemButton.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
     async function fetchData() {
         try {
-            const response = await axios.get(url);
+            const response = await axios.get(server_ip+'/api/v1/problems');
             const data = response.data;
+            console.log(`data: ${data}`)
+            console.log(data)
 
             const dataContainer = document.getElementById("dataContainer");
             const table = document.getElementById("problemTable");
@@ -23,11 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
             data.forEach(item => {
                 const row = tbody.insertRow();
                 row.innerHTML = 
-                `<td>${item.userId}</td>
-                <td>${item.id}</td>
+                `<td>${item.id}</td>
                 <td>${item.title}</td>
-                <td>${item.body}</td>
-                <td>Output example</td>
+                <td>${item.content}</td>
+                <td>${item.exampleTestInput}</td>
+                <td>${item.exampleTestOut}</td>
                 <td><button type="button" class="delete-button">Delete</button>
                 </td>`;
                 const deleteButton = row.querySelector('.delete-button');
